@@ -26,15 +26,17 @@ export default function DataContainer() {
     ]);
 
     return (
-        <Container style={{ textAlign: 'center' }}>
-            <h1>List of Students</h1>
-            <ListGroup as="ul"  >
-                {data.map(items => (
-                    <ListGroup.Item variant="dark" >
-                        <span>{items.name}</span> Age :<span>{items.age}</span>
-                    </ListGroup.Item>
-                ))}
-            </ListGroup>
+        <Container style={{ marginTop: 50, textAlign: 'center', maxWidth: 800 }}>
+            <Card border="dark">
+                <h1>List of Students</h1>
+                <ListGroup as="ul"  >
+                    {data.map(items => (
+                        <ListGroup.Item variant="dark" >
+                            <span>{items.name}</span> Age :<span>{items.age}</span>
+                        </ListGroup.Item>
+                    ))}
+                </ListGroup>
+            </Card>
         </Container>
     );
 };
